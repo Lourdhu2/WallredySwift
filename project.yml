@@ -1,0 +1,21 @@
+name: Wallredy
+options:
+  bundleIdPrefix: com.wallredy
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "16.0"
+targets:
+  Wallredy:
+    type: application
+    platform: iOS
+    sources:
+      - Wallredy
+    settings:
+      base:
+        INFOPLIST_FILE: Wallredy/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.wallredy.app
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        DEVELOPMENT_TEAM: M5KY362T53
+        SWIFT_VERSION: "6.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
