@@ -161,19 +161,18 @@ struct WallpaperCard: View {
     @EnvironmentObject var favoritesManager: FavoritesManager
 
     var body: some View {
-        AsyncImage(url: URL(string: photo.src.medium)) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: .infinity)
-                .frame(height: 260)
-                .clipped()
-        } placeholder: {
-            Rectangle()
-                .fill(.ultraThinMaterial)
-                .frame(maxWidth: .infinity)
-                .frame(height: 260)
+        GeometryReader { geo in
+            AsyncImage(url: URL(string: photo.src.portrait)) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geo.size.width, height: geo.size.height)
+            } placeholder: {
+                Rectangle()
+                    .fill(.ultraThinMaterial)
+            }
         }
+        .frame(height: 260)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(alignment: .topTrailing) {
             Button {
@@ -193,6 +192,5 @@ struct WallpaperCard: View {
                 .foregroundStyle(.secondary)
                 .padding(8)
         }
-        .contentShape(RoundedRectangle(cornerRadius: 16))
     }
 }
