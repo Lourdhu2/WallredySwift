@@ -20,18 +20,22 @@ struct PhotoPreviewView: View {
 
     var body: some View {
         ZStack {
+            Color.black.ignoresSafeArea()
+
             // Swipeable full-screen wallpapers
             TabView(selection: $currentPhoto) {
                 ForEach(photos) { photo in
-                    AsyncImage(url: URL(string: photo.src.portrait)) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                            .clipped()
-                    } placeholder: {
-                        Color.black
-                            .overlay(ProgressView())
+                    GeometryReader { geo in
+                        AsyncImage(url: URL(string: photo.src.portrait)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: geo.size.width, height: geo.size.height)
+                                .clipped()
+                        } placeholder: {
+                            Color.black
+                                .overlay(ProgressView())
+                        }
                     }
                     .ignoresSafeArea()
                     .tag(photo)
@@ -104,6 +108,7 @@ struct PhotoPreviewView: View {
                 .padding(.bottom, 50)
             }
         }
+        .toolbarBackground(.hidden, for: .navigationBar)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
