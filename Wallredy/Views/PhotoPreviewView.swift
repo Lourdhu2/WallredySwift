@@ -22,36 +22,39 @@ struct PhotoPreviewView: View {
         ZStack {
             Color.black.ignoresSafeArea()
 
-            // Swipeable full-screen wallpapers
-            TabView(selection: $currentPhoto) {
-                ForEach(photos) { photo in
-                    AsyncImage(url: URL(string: photo.src.large2x)) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(
-                                minWidth: 0, maxWidth: .infinity,
-                                minHeight: 0, maxHeight: .infinity
-                            )
-                            .clipped()
-                    } placeholder: {
-                        Color.black
-                            .overlay(ProgressView())
+            // Vertically swipeable full-screen wallpapers
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVStack(spacing: 0) {
+                    ForEach(photos) { photo in
+                        AsyncImage(url: URL(string: photo.src.large2x)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: UIScreen.main.bounds.width,
+                                       height: UIScreen.main.bounds.height)
+                                .clipped()
+                        } placeholder: {
+                            Color.black
+                                .frame(width: UIScreen.main.bounds.width,
+                                       height: UIScreen.main.bounds.height)
+                                .overlay(ProgressView())
+                        }
+                        .id(photo.id)
+                        .containerRelativeFrame(.vertical)
                     }
-                    .frame(
-                        minWidth: 0, maxWidth: .infinity,
-                        minHeight: 0, maxHeight: .infinity
-                    )
-                    .ignoresSafeArea()
-                    .tag(photo)
                 }
+                .scrollTargetLayout()
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
+            .scrollTargetBehavior(.paging)
+            .scrollPosition(id: Binding(
+                get: { currentPhoto.id },
+                set: { newID in
+                    if let id = newID, let photo = photos.first(where: { $0.id == id }) {
+                        currentPhoto = photo
+                    }
+                }
+            ))
             .ignoresSafeArea()
-            .frame(
-                minWidth: 0, maxWidth: .infinity,
-                minHeight: 0, maxHeight: .infinity
-            )
 
             // Overlay controls
             VStack {
