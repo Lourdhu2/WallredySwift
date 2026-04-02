@@ -139,6 +139,9 @@ struct PhotoPreviewView: View {
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .toolbarVisibility(.hidden, for: .navigationBar)
+        .toolbar(.hidden, for: .tabBar)
         .alert(alertTitle, isPresented: $showAlert) {
             Button("OK") {}
         } message: {
