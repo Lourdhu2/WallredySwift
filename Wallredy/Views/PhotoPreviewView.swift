@@ -19,30 +19,29 @@ struct PhotoPreviewView: View {
     }
 
     var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
+        GeometryReader { fullScreen in
+            ZStack {
+                Color.black.ignoresSafeArea()
 
-            // Swipeable full-screen wallpapers
-            TabView(selection: $currentPhoto) {
-                ForEach(photos) { photo in
-                    GeometryReader { geo in
-                        AsyncImage(url: URL(string: photo.src.portrait)) { image in
+                // Swipeable full-screen wallpapers
+                TabView(selection: $currentPhoto) {
+                    ForEach(photos) { photo in
+                        AsyncImage(url: URL(string: photo.src.large2x)) { image in
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: geo.size.width, height: geo.size.height)
+                                .frame(width: fullScreen.size.width + fullScreen.safeAreaInsets.leading + fullScreen.safeAreaInsets.trailing,
+                                       height: fullScreen.size.height + fullScreen.safeAreaInsets.top + fullScreen.safeAreaInsets.bottom)
                                 .clipped()
                         } placeholder: {
                             Color.black
                                 .overlay(ProgressView())
                         }
+                        .tag(photo)
                     }
-                    .ignoresSafeArea()
-                    .tag(photo)
                 }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .ignoresSafeArea()
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .ignoresSafeArea()
 
             // Overlay controls
             VStack {
@@ -108,6 +107,8 @@ struct PhotoPreviewView: View {
                 .padding(.bottom, 50)
             }
         }
+        }
+        .ignoresSafeArea()
         .toolbarBackground(.hidden, for: .navigationBar)
         .navigationBarBackButtonHidden(true)
         .toolbar {
