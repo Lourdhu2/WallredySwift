@@ -87,10 +87,31 @@ struct ExploreView: View {
             .navigationDestination(for: PexelsPhoto.self) { photo in
                 PhotoPreviewView(photo: photo, photos: viewModel.photos)
             }
-            .searchable(text: $searchText, prompt: "Search wallpapers...")
-            .onSubmit(of: .search) {
-                isSearching = true
-                viewModel.search(searchText)
+            .safeAreaInset(edge: .top) {
+                HStack(spacing: 10) {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundStyle(.secondary)
+                    TextField("Search wallpapers...", text: $searchText)
+                        .submitLabel(.search)
+                        .onSubmit {
+                            isSearching = true
+                            viewModel.search(searchText)
+                        }
+                    if !searchText.isEmpty {
+                        Button {
+                            searchText = ""
+                            isSearching = false
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 12)
+                .glassEffect(.regular, in: .capsule)
+                .padding(.horizontal)
+                .padding(.bottom, 8)
             }
             .onChange(of: searchText) {
                 if searchText.isEmpty {
