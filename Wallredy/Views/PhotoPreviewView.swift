@@ -29,16 +29,29 @@ struct PhotoPreviewView: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
+                            .frame(
+                                minWidth: 0, maxWidth: .infinity,
+                                minHeight: 0, maxHeight: .infinity
+                            )
+                            .clipped()
                     } placeholder: {
                         Color.black
                             .overlay(ProgressView())
                     }
+                    .frame(
+                        minWidth: 0, maxWidth: .infinity,
+                        minHeight: 0, maxHeight: .infinity
+                    )
                     .ignoresSafeArea()
                     .tag(photo)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea()
+            .frame(
+                minWidth: 0, maxWidth: .infinity,
+                minHeight: 0, maxHeight: .infinity
+            )
 
             // Overlay controls
             VStack {
