@@ -55,6 +55,23 @@ struct PhotoPreviewView: View {
 
             // Overlay controls
             VStack {
+                // Back button
+                HStack {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.body.weight(.semibold))
+                            .foregroundStyle(.white)
+                            .frame(width: 36, height: 36)
+                            .background(.white.opacity(0.2))
+                            .clipShape(Circle())
+                    }
+                    .padding(.leading, 20)
+                    .padding(.top, 60)
+                    Spacer()
+                }
+
                 Spacer()
 
                 HStack {
@@ -118,22 +135,7 @@ struct PhotoPreviewView: View {
             }
         }
         .ignoresSafeArea()
-        .toolbarBackground(.hidden, for: .navigationBar)
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.body.weight(.semibold))
-                        .foregroundStyle(.white)
-                        .frame(width: 36, height: 36)
-                        .background(.white.opacity(0.2))
-                        .clipShape(Circle())
-                }
-            }
-        }
+        .navigationBarHidden(true)
         .alert(alertTitle, isPresented: $showAlert) {
             Button("OK") {}
         } message: {
