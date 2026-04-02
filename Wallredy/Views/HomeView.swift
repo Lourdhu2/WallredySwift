@@ -112,11 +112,16 @@ struct FeaturedCard: View {
 
     var body: some View {
         AsyncImage(url: URL(string: photo.src.large)) { image in
-            image.resizable().aspectRatio(contentMode: .fill)
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 180)
+                .clipped()
         } placeholder: {
-            Rectangle().fill(.ultraThinMaterial)
+            Rectangle()
+                .fill(.ultraThinMaterial)
+                .frame(width: 300, height: 180)
         }
-        .frame(width: 300, height: 180)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(alignment: .bottomLeading) {
             Text(photo.photographer)
@@ -160,11 +165,13 @@ struct WallpaperCard: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: .infinity)
                 .frame(height: 260)
                 .clipped()
         } placeholder: {
             Rectangle()
                 .fill(.ultraThinMaterial)
+                .frame(maxWidth: .infinity)
                 .frame(height: 260)
         }
         .clipShape(RoundedRectangle(cornerRadius: 16))
