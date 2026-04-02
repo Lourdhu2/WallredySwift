@@ -58,9 +58,9 @@ struct HomeView: View {
                             .padding(.horizontal)
 
                         LazyVGrid(columns: [
-                            GridItem(.flexible(), spacing: 10),
-                            GridItem(.flexible(), spacing: 10)
-                        ], spacing: 10) {
+                            GridItem(.flexible(), spacing: 12),
+                            GridItem(.flexible(), spacing: 12)
+                        ], spacing: 14) {
                             ForEach(viewModel.photos) { photo in
                                 NavigationLink(value: photo) {
                                     WallpaperCard(photo: photo)
@@ -157,11 +157,16 @@ struct WallpaperCard: View {
 
     var body: some View {
         AsyncImage(url: URL(string: photo.src.medium)) { image in
-            image.resizable().aspectRatio(contentMode: .fill)
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 260)
+                .clipped()
         } placeholder: {
-            Rectangle().fill(.ultraThinMaterial)
+            Rectangle()
+                .fill(.ultraThinMaterial)
+                .frame(height: 260)
         }
-        .frame(height: 260)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(alignment: .topTrailing) {
             Button {
@@ -181,5 +186,6 @@ struct WallpaperCard: View {
                 .foregroundStyle(.secondary)
                 .padding(8)
         }
+        .contentShape(RoundedRectangle(cornerRadius: 16))
     }
 }
