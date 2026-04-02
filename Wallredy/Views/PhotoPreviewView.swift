@@ -37,13 +37,9 @@ struct PhotoPreviewView: View {
                         Text(photo.photographer)
                             .font(.headline)
                             .foregroundStyle(.white)
-                        Text("Tap an action below")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .shadow(color: .black.opacity(0.5), radius: 4, y: 2)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 12)
-                    .glassEffect(.regular, in: .capsule)
+                    .padding(.horizontal, 4)
 
                     Spacer()
 
