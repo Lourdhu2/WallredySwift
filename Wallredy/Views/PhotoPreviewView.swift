@@ -114,9 +114,20 @@ struct PhotoPreviewView: View {
         } message: {
             Text(alertMessage)
         }
-        .sheet(isPresented: $showShareSheet) {
-            if let url = shareURL {
-                ShareSheet(url: url)
+        .onChange(of: showShareSheet) {
+            if showShareSheet, let url = shareURL {
+                let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+                if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                   let rootVC = windowScene.windows.first?.rootViewController {
+                    var presenter = rootVC
+                    while let presented = presenter.presentedViewController {
+                        presenter = presented
+                    }
+                    activityVC.completionWithItemsHandler = { _, _, _, _ in
+                        showShareSheet = false
+                    }
+                    presenter.present(activityVC, animated: true)
+                }
             }
         }
     }
@@ -158,13 +169,3 @@ struct PhotoPreviewView: View {
     }
 }
 
-// MARK: - Share Sheet
-struct ShareSheet: UIViewControllerRepresentable {
-    let url: URL
-
-    func makeUIViewController(context: Context) -> UIActivityViewController {
-        UIActivityViewController(activityItems: [url], applicationActivities: nil)
-    }
-
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
-}
