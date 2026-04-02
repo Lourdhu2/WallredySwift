@@ -91,8 +91,8 @@ struct PhotoPreviewView: View {
                         }
                     }
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 40)
+                .padding(.horizontal, 28)
+                .padding(.bottom, 50)
             }
         }
         .navigationBarBackButtonHidden(true)
