@@ -37,7 +37,7 @@ struct FavoritesView: View {
                         .padding(.bottom, 80)
                     }
                     .navigationDestination(for: PexelsPhoto.self) { photo in
-                        PhotoPreviewView(photo: photo)
+                        PhotoPreviewView(photo: photo, photos: favoritesManager.favorites)
                     }
                 }
             }

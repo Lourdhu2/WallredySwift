@@ -107,7 +107,7 @@ struct CategoryDetailView: View {
         }
         .navigationTitle(category)
         .navigationDestination(for: PexelsPhoto.self) { photo in
-            PhotoPreviewView(photo: photo)
+            PhotoPreviewView(photo: photo, photos: viewModel.photos)
         }
         .task {
             viewModel.selectCategory(category)

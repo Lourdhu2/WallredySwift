@@ -108,7 +108,7 @@ struct HomeView: View {
                 }
             }
             .navigationDestination(for: PexelsPhoto.self) { photo in
-                PhotoPreviewView(photo: photo)
+                PhotoPreviewView(photo: photo, photos: viewModel.photos)
             }
             .task {
                 if viewModel.photos.isEmpty {
