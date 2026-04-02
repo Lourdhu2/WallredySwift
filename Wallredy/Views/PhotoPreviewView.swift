@@ -32,13 +32,16 @@ struct PhotoPreviewView: View {
 
                 // Bottom bar with glass
                 HStack {
-                    // Photographer info
-                    VStack(alignment: .leading, spacing: 2) {
+                    // Photographer credit
+                    HStack(spacing: 6) {
+                        Image(systemName: "camera.fill")
+                            .font(.caption)
                         Text(photo.photographer)
-                            .font(.headline)
-                            .foregroundStyle(.white)
-                            .shadow(color: .black.opacity(0.5), radius: 4, y: 2)
+                            .font(.subheadline)
+                            .fontWeight(.medium)
                     }
+                    .foregroundStyle(.white.opacity(0.55))
+                    .shadow(color: .black.opacity(0.3), radius: 3, y: 1)
                     .padding(.horizontal, 4)
 
                     Spacer()
