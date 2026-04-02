@@ -19,29 +19,26 @@ struct PhotoPreviewView: View {
     }
 
     var body: some View {
-        GeometryReader { fullScreen in
-            ZStack {
-                Color.black.ignoresSafeArea()
+        ZStack {
+            Color.black.ignoresSafeArea()
 
-                // Swipeable full-screen wallpapers
-                TabView(selection: $currentPhoto) {
-                    ForEach(photos) { photo in
-                        AsyncImage(url: URL(string: photo.src.large2x)) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: fullScreen.size.width + fullScreen.safeAreaInsets.leading + fullScreen.safeAreaInsets.trailing,
-                                       height: fullScreen.size.height + fullScreen.safeAreaInsets.top + fullScreen.safeAreaInsets.bottom)
-                                .clipped()
-                        } placeholder: {
-                            Color.black
-                                .overlay(ProgressView())
-                        }
-                        .tag(photo)
+            // Swipeable full-screen wallpapers
+            TabView(selection: $currentPhoto) {
+                ForEach(photos) { photo in
+                    AsyncImage(url: URL(string: photo.src.large2x)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        Color.black
+                            .overlay(ProgressView())
                     }
+                    .ignoresSafeArea()
+                    .tag(photo)
                 }
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .ignoresSafeArea()
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .ignoresSafeArea()
 
             // Overlay controls
             VStack {
@@ -106,7 +103,6 @@ struct PhotoPreviewView: View {
                 .padding(.horizontal, 28)
                 .padding(.bottom, 50)
             }
-        }
         }
         .ignoresSafeArea()
         .toolbarBackground(.hidden, for: .navigationBar)
