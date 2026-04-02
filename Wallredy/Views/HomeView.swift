@@ -93,7 +93,20 @@ struct HomeView: View {
                 }
                 .padding(.top, 8)
             }
-            .navigationTitle("Wallredy")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Wallredy")
+                        .font(.system(size: 28, weight: .black, design: .rounded))
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [.purple, .pink, .orange],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                }
+            }
             .navigationDestination(for: PexelsPhoto.self) { photo in
                 PhotoPreviewView(photo: photo)
             }
