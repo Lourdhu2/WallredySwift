@@ -110,11 +110,17 @@ struct PhotoPreviewView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.body.weight(.semibold))
-                        .foregroundStyle(.white)
-                        .frame(width: 40, height: 40)
-                        .glassEffect(.regular, in: .circle)
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                            .font(.body.weight(.semibold))
+                        Text("Back")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                    }
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 8)
+                    .glassEffect(.regular, in: .capsule)
                 }
             }
         }
