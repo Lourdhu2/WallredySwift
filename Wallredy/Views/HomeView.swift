@@ -96,7 +96,7 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("Wallredy")
+                    Text("Swyftwall")
                         .font(.system(size: 28, weight: .black, design: .rounded))
                         .foregroundStyle(
                             LinearGradient(

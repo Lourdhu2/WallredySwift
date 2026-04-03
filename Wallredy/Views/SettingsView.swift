@@ -6,7 +6,7 @@ struct SettingsView: View {
             List {
                 Section {
                     VStack(spacing: 8) {
-                        Text("Wallredy")
+                        Text("Swyftwall")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                         Text("Version 1.0.0")
