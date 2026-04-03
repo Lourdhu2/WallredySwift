@@ -26,21 +26,20 @@ struct PhotoPreviewView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack(spacing: 0) {
                     ForEach(photos) { photo in
-                        AsyncImage(url: URL(string: photo.src.large2x)) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width,
-                                       height: UIScreen.main.bounds.height)
-                                .clipped()
-                        } placeholder: {
-                            Color.black
-                                .frame(width: UIScreen.main.bounds.width,
-                                       height: UIScreen.main.bounds.height)
-                                .overlay(ProgressView())
+                        GeometryReader { geo in
+                            AsyncImage(url: URL(string: photo.src.large2x)) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: geo.size.width, height: geo.size.height)
+                                    .clipped()
+                            } placeholder: {
+                                Color.black
+                                    .overlay(ProgressView())
+                            }
                         }
                         .id(photo.id)
-                        .containerRelativeFrame(.vertical)
+                        .containerRelativeFrame([.horizontal, .vertical])
                     }
                 }
                 .scrollTargetLayout()
