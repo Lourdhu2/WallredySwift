@@ -76,18 +76,18 @@ struct PhotoPreviewView: View {
 
                 Spacer()
 
-                HStack {
-                    // Photographer credit
+                HStack(alignment: .bottom) {
+                    // Photographer credit — bottom left
                     HStack(spacing: 6) {
                         Image(systemName: "camera.fill")
-                            .font(.caption)
+                            .font(.caption2)
                         Text(currentPhoto.photographer)
-                            .font(.subheadline)
+                            .font(.caption)
                             .fontWeight(.medium)
                     }
-                    .foregroundStyle(.white.opacity(0.55))
+                    .foregroundStyle(.white.opacity(0.45))
                     .shadow(color: .black.opacity(0.3), radius: 3, y: 1)
-                    .padding(.horizontal, 4)
+                    .padding(.bottom, 8)
 
                     Spacer()
 
@@ -133,7 +133,7 @@ struct PhotoPreviewView: View {
                     }
                 }
                 .padding(.horizontal, 28)
-                .padding(.bottom, 50)
+                .padding(.bottom, 16)
             }
         }
         .ignoresSafeArea()
