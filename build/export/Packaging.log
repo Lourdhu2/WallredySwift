@@ -1,0 +1,139 @@
+2026-04-13 17:40:02 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f39a1500; archive(resolved)="<IDEArchive: 0x7f5ef01c0>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team(resolved)="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	Chain (15, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f39a1500; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionProcessingPipelineContext: 0x7f39a0c00; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd1b80; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd1900; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd1680; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd1400; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd1180; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd0f00; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd0c80; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd0a00; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd0780; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd0500; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="<IDEProvisioningBasicTeam: 0x7f64c41a0; teamID='M5KY362T53', teamName='(null)'>">
+	<IDEDistributionContext: 0x7f5fd0280; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="(null)">
+	<IDEDistributionContext: 0x7f5fd0000; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="<IDEDistributionMethodiOSAppStoreDistribution: 0x7f47e3880>", team="(null)">
+	<IDEDistributionContext: 0x1032098d0; archive = "<IDEArchive: 0x7f5ef01c0>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0x7f39a1500>
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2026-04-13 17:40:02 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app' '/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root/Payload/Wallredy.app'
+2026-04-13 17:40:02 +0000  >>> Copying /Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app 
+2026-04-13 17:40:02 +0000  copying file ./_CodeSignature/CodeResources ... 
+2026-04-13 17:40:02 +0000  2775 bytes for ./_CodeSignature/CodeResources
+2026-04-13 17:40:02 +0000  copying file ./Wallredy ... 
+2026-04-13 17:40:02 +0000  370112 bytes for ./Wallredy
+2026-04-13 17:40:02 +0000  copying file ./AppIcon60x60@2x.png ... 
+2026-04-13 17:40:02 +0000  1895 bytes for ./AppIcon60x60@2x.png
+2026-04-13 17:40:02 +0000  copying file ./Assets.car ... 
+2026-04-13 17:40:02 +0000  44248 bytes for ./Assets.car
+2026-04-13 17:40:02 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2026-04-13 17:40:02 +0000  2478 bytes for ./AppIcon76x76@2x~ipad.png
+2026-04-13 17:40:02 +0000  copying file ./embedded.mobileprovision ... 
+2026-04-13 17:40:02 +0000  12367 bytes for ./embedded.mobileprovision
+2026-04-13 17:40:02 +0000  copying file ./Info.plist ... 
+2026-04-13 17:40:02 +0000  1427 bytes for ./Info.plist
+2026-04-13 17:40:02 +0000  copying file ./PkgInfo ... 
+2026-04-13 17:40:02 +0000  8 bytes for ./PkgInfo
+2026-04-13 17:40:02 +0000 [MT] /usr/bin/ditto exited with 0
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionInfoPlistStep
+2026-04-13 17:40:02 +0000 [MT] Skipping setting DTXcodeBuildDistribution because toolsBuildVersionName was nil.
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionItemRemovalStep
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2026-04-13 17:40:02 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2026-04-13 17:40:02 +0000 [MT] Writing /var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Symbols/6587EC1D-69B8-3A4C-8BC1-930D4A77C207.symbols
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionCopyAppleProvidedContentStep
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2026-04-13 17:40:02 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionArchThinningStep
+2026-04-13 17:40:02 +0000 [MT] Archs to thin for item /Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app are []
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionODRStep
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2026-04-13 17:40:02 +0000 [MT] Skipping stripping extended attributes because the codesign step will strip them.
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2026-04-13 17:40:02 +0000 [MT] Entitlements for <IDEDistributionItem: 0x7f5ebefa0; bundleID='com.swyftwall.app', path='<DVTFilePath:0x7f5ebd6e0:'/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f5ebef40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f5fbe400; name='Apple Development: Lourdhu Thumma (JXDSC7854N)', hash='EE2B24DD6B409A31549C8A5775E0A524A94E7B40', serialNumber='26146C2B97D2B56E79F8BDD50475E320', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-04-02 21:49:56 +0000''>', entitlements='{
+    "application-identifier" = "M5KY362T53.com.swyftwall.app";
+    "com.apple.developer.team-identifier" = M5KY362T53;
+    "get-task-allow" = 1;
+}', teamID='M5KY362T53', identifier='com.swyftwall.app', executablePath='<DVTFilePath:0x7f5ebe9a0:'/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app/Wallredy'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "M5KY362T53.com.swyftwall.app";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = M5KY362T53;
+    "get-task-allow" = 0;
+}
+2026-04-13 17:40:02 +0000 [MT] Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2026-04-13 17:40:02 +0000 [MT] Entitlements for <IDEDistributionItem: 0x7f5ebefa0; bundleID='com.swyftwall.app', path='<DVTFilePath:0x7f5ebd6e0:'/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f5ebef40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f5fbc600; name='Apple Development: Lourdhu Thumma (JXDSC7854N)', hash='EE2B24DD6B409A31549C8A5775E0A524A94E7B40', serialNumber='26146C2B97D2B56E79F8BDD50475E320', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-04-02 21:49:56 +0000''>', entitlements='{
+    "application-identifier" = "M5KY362T53.com.swyftwall.app";
+    "com.apple.developer.team-identifier" = M5KY362T53;
+    "get-task-allow" = 1;
+}', teamID='M5KY362T53', identifier='com.swyftwall.app', executablePath='<DVTFilePath:0x7f5ebe9a0:'/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app/Wallredy'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "M5KY362T53.com.swyftwall.app";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = M5KY362T53;
+    "get-task-allow" = 0;
+}
+2026-04-13 17:40:02 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x7f5ebefa0; bundleID='com.swyftwall.app', path='<DVTFilePath:0x7f5ebd6e0:'/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f5ebef40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f5fbc600; name='Apple Development: Lourdhu Thumma (JXDSC7854N)', hash='EE2B24DD6B409A31549C8A5775E0A524A94E7B40', serialNumber='26146C2B97D2B56E79F8BDD50475E320', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2026-04-02 21:49:56 +0000''>', entitlements='{
+    "application-identifier" = "M5KY362T53.com.swyftwall.app";
+    "com.apple.developer.team-identifier" = M5KY362T53;
+    "get-task-allow" = 1;
+}', teamID='M5KY362T53', identifier='com.swyftwall.app', executablePath='<DVTFilePath:0x7f5ebe9a0:'/Users/reddy/WallredySwift/build/Wallredy.xcarchive/Products/Applications/Wallredy.app/Wallredy'>', hardenedRuntime='0'>'> to: /var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/entitlements~~~tpJOK5
+2026-04-13 17:40:02 +0000 [MT] invoking codesign: <NSConcreteTask: 0x7f30d2f30; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    931A4091F5D26209F697BF711933CB1D02A7CD02,
+    "--entitlements",
+    "/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/entitlements~~~tpJOK5",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root/Payload/Wallredy.app"
+)'>
+2026-04-13 17:40:02 +0000 [MT] codesign output: /var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root/Payload/Wallredy.app: replacing existing signature
+/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root/Payload/Wallredy.app: signed app bundle with Mach-O thin (arm64) [com.swyftwall.app]
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionZipODRItemStep
+2026-04-13 17:40:02 +0000 [MT] Skipping step: IDEDistributionZipODRItemStep because it said so
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2026-04-13 17:40:02 +0000 [MT] Running /usr/bin/rsync '-8aPhhE' '/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Symbols' '--link-dest' '/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq' '/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root'
+2026-04-13 17:40:02 +0000  Symbols/
+Symbols/6587EC1D-69B8-3A4C-8BC1-930D4A77C207.symbols
+2026-04-13 17:40:02 +0000 [MT] /usr/bin/rsync exited with 0
+2026-04-13 17:40:02 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root' '/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Packages/Wallredy.ipa'
+2026-04-13 17:40:02 +0000  >>> Copying /var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root 
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/_CodeSignature/CodeResources ... 
+2026-04-13 17:40:02 +0000  2775 bytes for ./Payload/Wallredy.app/_CodeSignature/CodeResources
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/Wallredy ... 
+2026-04-13 17:40:02 +0000  370176 bytes for ./Payload/Wallredy.app/Wallredy
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/AppIcon60x60@2x.png ... 
+2026-04-13 17:40:02 +0000  1895 bytes for ./Payload/Wallredy.app/AppIcon60x60@2x.png
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/Assets.car ... 
+2026-04-13 17:40:02 +0000  44248 bytes for ./Payload/Wallredy.app/Assets.car
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/AppIcon76x76@2x~ipad.png ... 
+2026-04-13 17:40:02 +0000  2478 bytes for ./Payload/Wallredy.app/AppIcon76x76@2x~ipad.png
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/embedded.mobileprovision ... 
+2026-04-13 17:40:02 +0000  16314 bytes for ./Payload/Wallredy.app/embedded.mobileprovision
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/Info.plist ... 
+2026-04-13 17:40:02 +0000  1427 bytes for ./Payload/Wallredy.app/Info.plist
+2026-04-13 17:40:02 +0000  copying file ./Payload/Wallredy.app/PkgInfo ... 
+2026-04-13 17:40:02 +0000  8 bytes for ./Payload/Wallredy.app/PkgInfo
+2026-04-13 17:40:02 +0000  copying file ./Symbols/6587EC1D-69B8-3A4C-8BC1-930D4A77C207.symbols ... 
+2026-04-13 17:40:02 +0000  950772 bytes for ./Symbols/6587EC1D-69B8-3A4C-8BC1-930D4A77C207.symbols
+2026-04-13 17:40:02 +0000 [MT] /usr/bin/ditto exited with 0
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionAppStoreInformationStep
+2026-04-13 17:40:02 +0000 [MT] Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionGenerateProcessedDistributionItems
+2026-04-13 17:40:02 +0000 [MT] IDEDistributionItem init <DVTFilePath:0x7f5ebf540:'/var/folders/mw/_10cgxmn7k12ln3l4z2gv96w0000gn/T/XcodeDistPipeline.~~~NeE0rq/Root/Payload/Wallredy.app'>
+2026-04-13 17:40:02 +0000 [MT] Processing step: IDEDistributionCreateManifestStep
+2026-04-13 17:40:02 +0000 [MT] Skipping step: IDEDistributionCreateManifestStep because it said so

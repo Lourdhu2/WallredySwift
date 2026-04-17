@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import Photos
 
 struct PhotoPreviewView: View {
@@ -154,6 +155,17 @@ struct PhotoPreviewView: View {
                     var presenter = rootVC
                     while let presented = presenter.presentedViewController {
                         presenter = presented
+                    }
+                    // iPad requires a popover anchor or UIActivityViewController crashes.
+                    if let pop = activityVC.popoverPresentationController {
+                        pop.sourceView = presenter.view
+                        pop.sourceRect = CGRect(
+                            x: presenter.view.bounds.midX,
+                            y: presenter.view.bounds.midY,
+                            width: 0,
+                            height: 0
+                        )
+                        pop.permittedArrowDirections = []
                     }
                     activityVC.completionWithItemsHandler = { _, _, _, _ in
                         showShareSheet = false
